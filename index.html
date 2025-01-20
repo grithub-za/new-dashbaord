@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <style>
+            /* 1. Use a more-intuitive box-sizing model */
+            *, *::before, *::after {
+                box-sizing: border-box;
+            }
+
+            /* 2. Remove default margin */
+            * {
+                margin: 0;
+            }
+
+            body {
+                /* 3. Add accessible line-height */
+                line-height: 1.5;
+                /* 4. Improve text rendering */
+                -webkit-font-smoothing: antialiased;
+            }
+
+            /* 5. Improve media defaults */
+            img, picture, video, canvas, svg {
+                display: block;
+                max-width: 100%;
+            }
+
+            /* 6. Inherit fonts for form controls */
+            input, button, textarea, select {
+                font: inherit;
+            }
+
+            /* 7. Avoid text overflows */
+            p, h1, h2, h3, h4, h5, h6 {
+                overflow-wrap: break-word;
+            }
+
+            /* 8. Improve line wrapping */
+            p {
+                text-wrap: pretty;
+            }
+
+            h1, h2, h3, h4, h5, h6 {
+                text-wrap: balance;
+            }
+
+            /*
+            9. Create a root stacking context
+            */
+            #root, #__next {
+                isolation: isolate;
+            }
+        </style>
+    
+        <style>
+            .bodyCntr{
+                background-color: #cccccc; 
+            }
+
+            .padding{
+                padding-top: 60px; 
+                padding-right: 80px; 
+                padding-bottom: 100px; 
+                padding-left: 100px; 
+            }
+
+            .main{
+                background-color: #ffffff;
+                display: flex;
+            }
+
+            .nav{
+                background-color: #333333;
+                color: #ffffff;
+                padding: 10px;
+                width: 10%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            .transactions{
+                background-color: #eeeeee;
+                padding: 10px;
+                width: 60%;
+            }
+
+            .topProducts{
+                padding: 10px;
+                width: 30%;
+            }
+
+            .logo{
+                font-size: 40px;
+                color: #ffffff;
+                text-decoration: none;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            .logOut{
+                font-size: 20px;
+                color: #ffffff;
+                text-decoration: none;
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .mainNav{
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .mainNav__item{
+                width: 100%;
+            }
+
+            .mainNav__link{
+                color: #ffffff;
+                font-size: 9px;
+                text-decoration: none;
+            }
+
+
+        </style>
+    </head>
+
+    <body class="bodyCntr padding">
+        <main class="main">
+            <nav class="nav">
+                <a href="/" class="logo">
+                    xai
+                </a>
+
+
+                <ul class="mainNav">
+                    <li class="mainNav__item">
+                        <a href="/" class="mainNav__link">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="mainNav__item">
+                        <a href="/projects" class="mainNav__link">
+                            Projects
+                        </a>
+                    </li>
+
+
+                </ul>
+
+
+                <a href="/" class="logOut">
+                    off
+                </a>
+            </nav>
+
+            <section class="transactions"></section>
+
+            <aside class="topProducts"></aside>
+        </main>
+    </body>
+</html>
+
