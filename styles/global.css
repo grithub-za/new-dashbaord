@@ -1,0 +1,177 @@
+.bodyCntr{
+    background-color: #cccccc; 
+}
+
+.padding{
+    padding-top: 20px; 
+    padding-right: 20px; 
+    padding-bottom: 20px; 
+    padding-left: 20px; 
+}
+
+.main{
+    background-color: #ffffff;
+    display: flex;
+    border-radius: 10px;
+}
+
+.nav{
+    background-color: #333333;
+    color: #ffffff;
+    padding: 10px 0 10px 0;
+    width: 8%;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    min-width: 60px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.transactions{
+    background-color: #eeeeee;
+    padding: 10px;
+    width: 60%;
+}
+
+.topProducts{
+    padding: 10px;
+    width: 30%;
+}
+
+.logo{
+    font-size: 30px;
+    letter-spacing: -3px;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.logOut{
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.mainNav{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.mainNav__item{
+    width: 100%;
+}
+
+.mainNav__item--active{
+    position: relative;
+}
+
+.mainNav__item--active::before{
+    content: "";
+    background-color: rgb(237, 134, 237);
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    z-index: 1;
+    left: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.mainNav__item--active svg{
+    fill: rgb(237, 134, 237);
+}
+
+.mainNav__link{
+    color: #ffffff;
+    font-size: 9px;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;               
+}
+
+.mainNavIcon{
+    width: 20px;
+    height: 20px;
+    fill: #ffffff;
+}
+
+.logOut{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.transactionsHeader{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px 20px 10px;
+}
+
+.transactionsHeader__list{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.transactionsHeading{
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.transactionsHeader__link{
+    padding: 10px;
+    display: block;
+    margin-right: 10px;
+}
+
+.transactionsHeader__listItem{
+    line-height: 1;
+}
+
+.title{
+    font-size: 21px;
+    line-height: 1;
+}
+
+.time{
+    font-size: 11px;
+    color: #666666;
+}
+
+.jobRole{
+    display: block;
+}
+
+.avatarCntr{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.avatarCntr__caption{
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.avatar{
+    border-radius: 50%;
+}
