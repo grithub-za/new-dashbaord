@@ -2,12 +2,21 @@
 
 <html lang="en">
     <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="xai dashboard" />
+        <meta name="keywords" content="xai, dashboard, web app" />
+        <meta name="author" content="Marshall" />
+
+        <link rel="conical" href="index.html" />
+
         <title>
             Dashboard
         </title>
 
         <link rel="stylesheet" href="styles/reset.css" />
         <link rel="stylesheet" href="styles/global.css" />
+        <link rel="stylesheet" media="print" href="styles/print.css" />
 
     </head>
 
@@ -87,7 +96,7 @@
                     </ul>
 
 
-                    <ul class="transactionsHeader__list">
+                    <ul class="transactionsHeader__list hide">
                         <li class="transactionsHeader__listItem">
                             <a href="#" class="transactionsHeader__link">
                                 <svg id="icon-chat" viewBox="0 0 24 24" width="30" height="30">
@@ -121,11 +130,16 @@
                 </header>
 
 
-                <article>
+                <article class="dataCntr">
                     <ul class="incomeRow">
                         <li class="incomeRow__item">
                             <figure class="avatarCntr">
-                                <img src="https://dummyimage.com/100x100/000/fff" alt="Avatar" width="50" height="50" class="avatar" />
+                                <picture>
+                                    <source srcset="https://dummyimage.com/100x100/000/fff" media="(min-width: 768px)" />
+                                    <source srcset="assets/300-1.jpg" media="(max-width: 500px)" />
+                                    
+                                    <img src="https://dummyimage.com/100x100/000/fff" alt="Avatar" width="50" height="50" class="avatar" />
+                                </picture>
                             
                                 <figcaption class="avatarCntr__caption">
                                     <strong>
@@ -186,15 +200,80 @@
                     </ul>
                 </article>
                 
+                <section class="dataCntr dataRow">
+                    <article class="dataColumn">
+                        <header class="dataHeader">
+                            <ul class="transactionsHeader__list transactionsHeading">
+                                <li class="transactionsHeader__listItem">
+                                    <h1 class="title">
+                                        Total Projected
+                                    </h1>
+                                </li>
+                                <li class="transactionsHeader__listItem">
+                                    <time class="time">
+                                        subtitle for this
+                                    </time>
+                                </li>
+                            </ul> 
+                            
+                            <ul class="transactionsHeader__list transactionsHeading">
+                                <li class="transactionsHeader__listItem">
+                                    <h1 class="title">
+                                        $12,345
+                                    </h1>
+                                </li>
+                                <li class="transactionsHeader__listItem">
+                                    <time class="time">
+                                        5.6% vs. last year
+                                    </time>
+                                </li>
+                            </ul> 
+                        </header>    
+                        
+                        
 
-                <article>
+                    </article>
+
+                    <article class="dataColumn">
+                        <header class="dataHeader">
+                            <ul class="transactionsHeader__list transactionsHeading">
+                                <li class="transactionsHeader__listItem">
+                                    <h1 class="title">
+                                        Data Activity
+                                    </h1>
+                                </li>
+                                <li class="transactionsHeader__listItem">
+                                    <time class="time">
+                                        subtitle for this
+                                    </time>
+                                </li>
+                            </ul> 
+
+                            <ul class="transactionsHeader__list transactionsHeading">
+                                <li class="transactionsHeader__listItem">
+                                    <h1 class="title">
+                                        $12,345
+                                    </h1>
+                                </li>
+                                <li class="transactionsHeader__listItem">
+                                    <time class="time">
+                                        5.6% vs. last year
+                                    </time>
+                                </li>
+                            </ul>
+                        </header>
+                                           
+                    </article>
+                </section>
+
+                <article class="dataCntr">
                     <header>
                         <h2>Top Customers</h2>
                     </header>
 
-                    <table>
+                    <table class="table hide">
                         <thead>
-                            <tr class="tableRow">
+                            <tr class="tableRow tableRow--heading">
                                 <th class="tableRow__heading">
                                     ID
                                 </th>
@@ -275,7 +354,7 @@
 
             </section>
 
-            <aside class="topProducts"></aside>
+            <aside class="topProducts hide hideTable"></aside>
         </main>
     </body>
 </html>
