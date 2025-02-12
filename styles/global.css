@@ -1,5 +1,8 @@
 .bodyCntr{
     background-color: #cccccc; 
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 5vh;
 }
 
 .padding{
@@ -9,14 +12,10 @@
     padding-left: 20px; 
 }
 
-@media screen and (max-width: 500px) {
-    .padding{
-        padding: 5px;
-    }
-}
 
 
 .main{
+    width: 90vw;
     background-color: #ffffff;
     display: flex;
     border-radius: 10px;
@@ -45,16 +44,52 @@
 .transactions{
     background-color: #ffffff;
     padding: 10px;
-    width: calc(100% - 8% + 25%)
+    width: 70%
 }
 
+
+
+/* top prroducts */
 .topProducts{
     background-color: #eeeeee;
-    padding: 10px;
-    width: 25%;
+    padding: 20px;
+    width: 30%;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+
+.topProducts__heading{
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topProducts__headingLink{
+    font-size: 12px;
+    color: blue;
+}
+
+.topProductsList{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 20px 0;
+    width: 100%;
+    gap: 10px;
+}
+
+.topProductsList__item{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 50%;
+}
+
+
+/* nav */
 
 .logo{
     font-size: 30px;
@@ -139,6 +174,7 @@
     display: flex;
     justify-content: space-between;
     padding: 20px 10px 20px 10px;
+    align-items: center;
 }
 
 .transactionsHeader__list, .incomeRow{
@@ -194,9 +230,22 @@
     background-color: #111111;
     width: 50px;
     height: 50px;
+    max-width: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
+    object-fit: contain;
+    flex: 1 0 50px;
+}
+
+.avatarCntr--row{
+    margin: 0
+}
+
+.avatar--small{
+    width: 25px;
+    height: 25px;
+    max-width: 25px;
 }
 
 .avatarSvg{
@@ -240,9 +289,6 @@
     }
 }
 
-.tableRow{
-    font-size: 13px;
-}
 
 .pill{
     background-color: rgb(24 108 192);
@@ -252,80 +298,6 @@
     padding: 1px 10px;
     line-height: 1;
     border-radius: 10px;
-}
-
-.table{
-    width: 100%;
-}
-
-.dataRow{
-    padding: 20px;
-}
-
-
-.tableRow:nth-child(odd){
-    background-color: #ccc;
-}
-
-.tableRow--heading{
-    background-color: #111 !important;
-    color: #ffffff;
-}
-
-.tableRow__cell{
-    padding: 5px
-}
-
-.dataCntr{
-    padding: 20px;
-}
-
-@media screen and (max-width: 500px) {
-    .dataCntr{
-        padding: 20px 0;
-    }
-}
-
-.dataRow{
-    display: flex;
-    flex-direction: row;
-}
-
-@media screen and (max-width: 500px) {
-    .dataRow{
-        flex-direction: column;
-    }
-}
-
-.dataColumn{
-    display: flex;
-    width: 50%;
-    padding-right: 10px;
-}
-
-@media screen and (max-width: 500px) {
-    .dataColumn{
-        width: 100%;
-        padding: 20px 0;
-    }
-}
-
-.dataColumn:last-child{
-    padding-right: 0;
-    padding-left: 10px;
-}
-
-@media screen and (max-width: 500px) {
-    .dataColumn:last-child{
-        padding-left: 0;
-    }
-}
-
-
-.dataHeader{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
 }
 
 
@@ -341,4 +313,20 @@
     .hideTable{
         display: none;
     }
+}
+
+
+.gradient{
+    position: relative;
+    margin: 0 0 40px 0;
+}
+
+.gradient::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    opacity: 0.75;
+    background: linear-gradient(to bottom,  rgba(238,238,238,0) 0%,rgba(238,238,238,1) 65%,rgba(238,238,238,1) 78%,rgba(238,238,238,1) 100%);
 }
