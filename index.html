@@ -76,7 +76,7 @@
 
 
                 <a href="/" class="logOut">
-                    <svg class="mainNavIcon" width="20" height="" id="icon-power_settings_new" viewBox="0 0 24 24">
+                    <svg class="mainNavIcon" width="20" height="20" id="icon-power_settings_new" viewBox="0 0 24 24">
                         <path d="M17.813 5.156q3.188 2.719 3.188 6.844 0 3.75-2.625 6.375t-6.375 2.625-6.375-2.625-2.625-6.375q0-1.688 0.938-3.703t2.25-3.141l1.406 1.406q-1.078 0.891-1.828 2.484t-0.75 2.953q0 2.906 2.039 4.945t4.945 2.039 4.945-2.039 2.039-4.945q0-1.359-0.75-2.953t-1.828-2.438zM12.984 3v9.984h-1.969v-9.984h1.969z"></path>
                     </svg>
                 </a>
@@ -570,29 +570,104 @@
 
 
 
+
+
+
+
         <script>
-           
+            const marshall = 47;
+            const bob = false;
+            const hasShoes = "this string has shoes"
+            const isHappy = true;
+            const isNumber = "20"
 
-            console.log(0 == false);
-            console.log(null == false);
-            console.log("" == false);
-            console.log("false" == false);
-            console.log(0 == "");
-            console.log("2" + "2");
-            console.log("2" + 2);
+            console.log(Number.isInteger(isNumber))
+
+            // this comment
+            parseInt(isNumber) //dojacsdjfads // const 
+            parseFloat(isNumber); /* open &  close */ const two = 0
+
+            // this is a javascript comment
+
+            /*
+              comment in here  
+            */
+
+
+            /**
+                @param this is a string
+            **/
+            function Marshall(param){
+
+            }
             
-            console.log(true || false); 
-            console.log(true && false); 
+            if( !marshall ){
+                console.log(marshall)
 
-            let x = "";
+            }else if( bob ){
+                console.log("happy birthday")
+            
+            }else{
+                console.log("ball")
+            }
 
-            console.log(0 === false);
 
-            console.log(undefined);
-            console.log(null);
+
+
+            switch(marshall){
+                case 0:
+                case true: 
+                case "grant":
+                    console.log("last name")
+                    break;
+
+                default: console.log("nothing")
+            }
+
+
+            
+            // we know that marshall = 10
+
+            let marshallAge = 0
+
+            while(marshallAge <= marshall ){
+                // console.log(marshallAge)
+
+                marshallAge = marshallAge + 1
+            }
+
+
+            do{
+                marshallAge = marshallAge + 1
+            
+            }while( marshallAge <= marshall )
+
+            // console.log(marshallAge)
+
+
+            let result  = 1
+
+            for( let counter = 0; counter < 10; counter++ ){
+                result = result * 2
+            }
+
+            console.log(result)
+
+
+            for( let current = 22; ; current += 1 ){
+                if( current % 7 == 0 ){
+                    console.log(current)
+                    break;
+                }
+
+                console.log("happy")
+            }
 
 
         </script>
+
+
+
 
 
 </body>
